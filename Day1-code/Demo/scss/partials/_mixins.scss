@@ -3,3 +3,22 @@
     justify-content: center;
     align-items: center;
 }
+
+@mixin centered-container {
+    width: $container-width;
+    margin: 0 auto;
+}
+
+@mixin section-spacing {
+    padding: $spacing-xl 0;
+}
+
+@mixin button-base {
+    padding: 14px 32px;
+    background: $primary-green;
+    color: $white;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    font-size: $font-normal;
+}

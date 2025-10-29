@@ -15,8 +15,7 @@ body {
 }
 
 .centered-container {
-    width: 80vw;
-    margin: 0 auto;
+    @include centered-container;
 }
 
 .nav-list {
@@ -34,19 +33,19 @@ body {
     padding: 10px 20px;
     border: none;
     background-color: $text-color;
-    color: white;
+    color: $white;
     cursor: pointer;
-    border-radius: 6px;
+    border-radius: $border-radius;
 }
 
 .primary-button {
-    background: #4CAF4F;
-    color: #fff;
+    background: $primary-green;
+    color: $white;
 }
 
 .secondary-button {
     background: transparent;
-    color: #4CAF4F;
+    color: $primary-green;
 }
 
 .flex-center {
@@ -60,8 +59,8 @@ body {
 }
 
 .heading-1 {
-    font-size: 36px;
-    font-weight: 500;
+    font-size: $font-xl;
+    font-weight: $font-weight-normal;
 }
 
 .text-center {
@@ -69,14 +68,14 @@ body {
 }
 
 .para {
-    font-size: 16px;
-    color: #717171;
+    font-size: $font-normal;
+    color: $text-gray;
 }
 
 .care-desc {
     width: 630px;
     margin: 0 auto;
-    margin-top: 16px;
+    margin-top: $font-normal;
 }
 
 .care-container {
@@ -90,12 +89,12 @@ body {
 
 .care-text {
     position: absolute;
-    background: #F5F7FA;
+    background: $bg-gray;
     width: 80%;
     left: 10%;
     height: 135px;
     top: 68%;
-    border-radius: 6px;
+    border-radius: $border-radius;
     text-align: center;
     padding: 45px;
     box-sizing: border-box;
@@ -111,4 +110,312 @@ body {
 .client-image-container {
     position: relative;
     width: 368px;
+    text-align: center;
+    padding: $spacing-medium;
+    box-sizing: border-box;
+
+    img {
+        margin-bottom: $spacing-small;
+    }
+
+    h1 {
+        font-size: $font-large;
+        margin-bottom: $spacing-xs;
+    }
+
+    p {
+        font-size: $font-small;
+        color: $text-gray;
+    }
+}
+
+.pixel-grade {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include centered-container;
+    @include section-spacing;
+    gap: $gap-medium;
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .text {
+        h1 {
+            font-size: $font-xl;
+            font-weight: $font-weight-normal;
+            margin-bottom: $spacing-small;
+            color: $heading-dark;
+        }
+
+        p {
+            font-size: $font-small;
+            color: $text-gray;
+            line-height: 1.6;
+        }
+    }
+
+    .learn-more {
+        margin-top: $spacing-medium;
+
+        button {
+            @include button-base;
+        }
+    }
+}
+
+.local-business {
+    @include centered-container;
+    @include section-spacing;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $gap-large;
+
+    .left {
+        flex: 1;
+
+        h1 {
+            font-size: $font-xl;
+            font-weight: $font-weight-normal;
+            color: $heading-dark;
+            margin-bottom: $spacing-xs;
+        }
+
+        p {
+            font-size: $font-normal;
+            color: $text-gray;
+        }
+    }
+
+    .right {
+        flex: 1;
+
+        .upper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: $gap-small;
+
+            > div {
+                display: flex;
+                align-items: center;
+                gap: $font-normal;
+
+                .image img {
+                    width: 48px;
+                    height: 48px;
+                }
+
+                .text {
+                    h1 {
+                        font-size: $font-large;
+                        font-weight: $font-weight-semibold;
+                        color: $heading-dark;
+                        margin-bottom: 4px;
+                    }
+
+                    p {
+                        font-size: $font-normal;
+                        color: $text-gray;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.testimonial-section {
+    background: $bg-gray;
+    @include section-spacing;
+    margin-top: $spacing-xl;
+
+    .testimonial-container {
+        @include centered-container;
+        display: flex;
+        gap: $gap-medium;
+        align-items: center;
+
+        .testimonial-image {
+            flex-shrink: 0;
+
+            img {
+                width: 300px;
+                height: auto;
+            }
+        }
+
+        .testimonial-content {
+            flex: 1;
+
+            .testimonial-text {
+                font-size: $font-normal;
+                color: $text-gray;
+                line-height: 1.6;
+                margin-bottom: 24px;
+            }
+
+            .testimonial-author {
+                font-size: $font-medium;
+                font-weight: $font-weight-semibold;
+                color: $primary-green;
+                margin-bottom: 4px;
+            }
+
+            .testimonial-position {
+                font-size: $font-normal;
+                color: $text-gray;
+                margin-bottom: $spacing-medium;
+            }
+
+            .testimonial-clients {
+                display: flex;
+                align-items: center;
+                gap: $spacing-medium;
+                flex-wrap: wrap;
+
+                img {
+                    height: $gap-small;
+                    width: auto;
+                    opacity: 0.7;
+                }
+
+                .meet-clients {
+                    color: $primary-green;
+                    text-decoration: none;
+                    font-weight: $font-weight-semibold;
+                    font-size: $font-normal;
+                }
+            }
+        }
+    }
+}
+
+.demo {
+    background: $bg-gray;
+    padding: $gap-small 0;
+    text-align: center;
+    margin-top: $spacing-xl;
+
+    h1 {
+        font-size: $font-xxl;
+        font-weight: $font-weight-semibold;
+        color: $footer-dark;
+        margin-bottom: $spacing-medium;
+    }
+
+    button {
+        @include button-base;
+    }
+}
+
+.footer-section {
+    background: $footer-dark;
+    padding: $spacing-xl 0 $gap-small;
+
+    .footer-container {
+        @include centered-container;
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            gap: $gap-large;
+
+            .footer-brand {
+                flex: 1;
+
+                .footer-logo {
+                    width: 150px;
+                    margin-bottom: $spacing-medium;
+                }
+
+                p {
+                    color: $bg-gray;
+                    font-size: $font-small;
+                    margin-bottom: $spacing-xxs;
+                }
+
+                .social-icons {
+                    display: flex;
+                    gap: $font-normal;
+                    margin-top: $spacing-medium;
+
+                    a {
+                        width: 32px;
+                        height: 32px;
+                        background: rgba(255, 255, 255, 0.1);
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        img {
+                            width: $font-normal;
+                            height: $font-normal;
+                        }
+                    }
+                }
+            }
+
+            .footer-links {
+                flex: 2;
+                display: flex;
+                gap: $gap-medium;
+
+                .footer-column {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    gap: $spacing-xs;
+
+                    h4 {
+                        color: $white;
+                        font-size: 18px;
+                        font-weight: $font-weight-semibold;
+                        margin-bottom: $spacing-xs;
+                    }
+
+                    a {
+                        color: $bg-gray;
+                        text-decoration: none;
+                        font-size: $font-small;
+
+                        &:hover {
+                            color: $primary-green;
+                        }
+                    }
+
+                    .newsletter {
+                        display: flex;
+                        margin-top: $spacing-xxs;
+
+                        input {
+                            flex: 1;
+                            padding: 10px $font-normal;
+                            border: none;
+                            border-radius: $border-radius 0 0 $border-radius;
+                            background: rgba(255, 255, 255, 0.1);
+                            color: $white;
+                            font-size: $font-small;
+
+                            &::placeholder {
+                                color: rgba(255, 255, 255, 0.5);
+                            }
+                        }
+
+                        button {
+                            padding: 10px $font-normal;
+                            border: none;
+                            border-radius: 0 $border-radius $border-radius 0;
+                            background: $primary-green;
+                            color: $white;
+                            cursor: pointer;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

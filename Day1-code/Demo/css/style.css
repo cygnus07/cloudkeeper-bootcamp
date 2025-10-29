@@ -104,4 +104,283 @@ body {
   padding: 50px 0px;
 }
 
+.client-image-container {
+  position: relative;
+  width: 368px;
+  text-align: center;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.client-image-container img {
+  margin-bottom: 20px;
+}
+.client-image-container h1 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+.client-image-container p {
+  font-size: 14px;
+  color: #717171;
+}
+
+.pixel-grade {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80vw;
+  margin: 0 auto;
+  padding: 60px 0;
+  gap: 60px;
+}
+.pixel-grade img {
+  max-width: 100%;
+  height: auto;
+}
+.pixel-grade .text h1 {
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #4D4D4D;
+}
+.pixel-grade .text p {
+  font-size: 14px;
+  color: #717171;
+  line-height: 1.6;
+}
+.pixel-grade .learn-more {
+  margin-top: 30px;
+}
+.pixel-grade .learn-more button {
+  padding: 14px 32px;
+  background: #4CAF4F;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.local-business {
+  width: 80vw;
+  margin: 0 auto;
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+.local-business .left {
+  flex: 1;
+}
+.local-business .left h1 {
+  font-size: 36px;
+  font-weight: 500;
+  color: #4D4D4D;
+  margin-bottom: 12px;
+}
+.local-business .left p {
+  font-size: 16px;
+  color: #717171;
+}
+.local-business .right {
+  flex: 1;
+}
+.local-business .right .upper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+.local-business .right .upper > div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.local-business .right .upper > div .image img {
+  width: 48px;
+  height: 48px;
+}
+.local-business .right .upper > div .text h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #4D4D4D;
+  margin-bottom: 4px;
+}
+.local-business .right .upper > div .text p {
+  font-size: 16px;
+  color: #717171;
+}
+
+.testimonial-section {
+  background: #F5F7FA;
+  padding: 60px 0;
+  margin-top: 60px;
+}
+.testimonial-section .testimonial-container {
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+.testimonial-section .testimonial-container .testimonial-image {
+  flex-shrink: 0;
+}
+.testimonial-section .testimonial-container .testimonial-image img {
+  width: 300px;
+  height: auto;
+}
+.testimonial-section .testimonial-container .testimonial-content {
+  flex: 1;
+}
+.testimonial-section .testimonial-container .testimonial-content .testimonial-text {
+  font-size: 16px;
+  color: #717171;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+.testimonial-section .testimonial-container .testimonial-content .testimonial-author {
+  font-size: 20px;
+  font-weight: 600;
+  color: #4CAF4F;
+  margin-bottom: 4px;
+}
+.testimonial-section .testimonial-container .testimonial-content .testimonial-position {
+  font-size: 16px;
+  color: #717171;
+  margin-bottom: 30px;
+}
+.testimonial-section .testimonial-container .testimonial-content .testimonial-clients {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.testimonial-section .testimonial-container .testimonial-content .testimonial-clients img {
+  height: 40px;
+  width: auto;
+  opacity: 0.7;
+}
+.testimonial-section .testimonial-container .testimonial-content .testimonial-clients .meet-clients {
+  color: #4CAF4F;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.demo {
+  background: #F5F7FA;
+  padding: 40px 0;
+  text-align: center;
+  margin-top: 60px;
+}
+.demo h1 {
+  font-size: 48px;
+  font-weight: 600;
+  color: #263238;
+  margin-bottom: 30px;
+}
+.demo button {
+  padding: 14px 32px;
+  background: #4CAF4F;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.footer-section {
+  background: #263238;
+  padding: 60px 0 40px;
+}
+.footer-section .footer-container {
+  width: 80vw;
+  margin: 0 auto;
+}
+.footer-section .footer-container .footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+.footer-section .footer-container .footer-content .footer-brand {
+  flex: 1;
+}
+.footer-section .footer-container .footer-content .footer-brand .footer-logo {
+  width: 150px;
+  margin-bottom: 30px;
+}
+.footer-section .footer-container .footer-content .footer-brand p {
+  color: #F5F7FA;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.footer-section .footer-container .footer-content .footer-brand .social-icons {
+  display: flex;
+  gap: 16px;
+  margin-top: 30px;
+}
+.footer-section .footer-container .footer-content .footer-brand .social-icons a {
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-section .footer-container .footer-content .footer-brand .social-icons a img {
+  width: 16px;
+  height: 16px;
+}
+.footer-section .footer-container .footer-content .footer-links {
+  flex: 2;
+  display: flex;
+  gap: 60px;
+}
+.footer-section .footer-container .footer-content .footer-links .footer-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer-section .footer-container .footer-content .footer-links .footer-column h4 {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.footer-section .footer-container .footer-content .footer-links .footer-column a {
+  color: #F5F7FA;
+  text-decoration: none;
+  font-size: 14px;
+}
+.footer-section .footer-container .footer-content .footer-links .footer-column a:hover {
+  color: #4CAF4F;
+}
+.footer-section .footer-container .footer-content .footer-links .footer-column .newsletter {
+  display: flex;
+  margin-top: 8px;
+}
+.footer-section .footer-container .footer-content .footer-links .footer-column .newsletter input {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px 0 0 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 14px;
+}
+.footer-section .footer-container .footer-content .footer-links .footer-column .newsletter input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.footer-section .footer-container .footer-content .footer-links .footer-column .newsletter button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  background: #4CAF4F;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+}
+
 /*# sourceMappingURL=style.css.map */
