@@ -15,37 +15,20 @@
         .product-card {
             padding: 20px;
             background-color: azure;
-            gap: 2rem;
             border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .product-card:hover {
+            background-color: #d4f0f0;
         }
     </style>
 </head>
 <body>
     <main>
         <center><h1>Products Page</h1></center>
-        <div id="product-container">
-            <div class="product-card">
-                <h3>Product Name: Iphone 17</h3>
-                <h3>Price: $399</h3>
-                <h3>Category: smartphones</h3>
-            </div>
-            <div class="product-card">
-                <h3>Product Name: Iphone 17</h3>
-                <h3>Price: $399</h3>
-                <h3>Category: smartphones</h3>
-            </div>
-            <div class="product-card">
-                <h3>Product Name: Iphone 17</h3>
-                <h3>Price: $399</h3>
-                <h3>Category: smartphones</h3>
-            </div>
-            <div class="product-card">
-                <h3>Product Name: Iphone 17</h3>
-                <h3>Price: $399</h3>
-                <h3>Category: smartphones</h3>
-            </div>
-
-        </div>
+        <div id="costliest"></div>
+        <div id="product-container"></div>
     </main>
 
     <script src="script.js"></script>
