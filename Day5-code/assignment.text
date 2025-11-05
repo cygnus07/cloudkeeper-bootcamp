@@ -1,0 +1,52 @@
+assignment 1 - find and terminate top memory process
+ps aux --sort=-%mem | head -n 2
+sudo kill -15 PID
+
+assignment 2 - create user devops with sudo privileges
+sudo adduser devops
+sudo usermod -aG sudo devops
+
+assignment 3 - connect to remote server, create directory, copy files using scp
+ssh username@ip_address
+mkdir -p /home/username/project_files
+exit
+scp file.txt username@ip_address:/home/username/project_files/
+
+assignment 4 - list java processes and save to file
+ps aux | grep java | grep -v grep > java_processes.txt
+
+assignment 5 - generate ssh key pair for two servers
+ssh-keygen -t rsa -b 4096
+ssh-copy-id username@server1
+ssh-copy-id username@server2
+
+assignment 6 - find error lines in syslog
+grep -i "error" /var/log/syslog > errors_found.txt
+
+assignment 7 - find all .conf files in /etc and sort
+find /etc -name "*.conf" 2>/dev/null | sort > conf_list.txt
+
+assignment 8 - count unique shells in /etc/passwd
+cut -d: -f7 /etc/passwd | sort -u | wc -l > shell_count.txt
+
+assignment 9 - vim operations
+vim filename.txt
+i (insert mode)
+esc (normal mode)
+:w (save)
+:q (quit)
+:wq (save and quit)
+
+assignment 10 - reset password and reboot
+sudo passwd username
+sudo reboot
+
+assignment 11 - tar home directory and scp to remote
+tar -czf home_backup.tar.gz ~
+scp home_backup.tar.gz username@remote:/path/
+ssh username@remote
+tar -xzf home_backup.tar.gz
+
+assignment 12 - install applications
+sudo apt update
+sudo apt install mysql-server docker.io -y
