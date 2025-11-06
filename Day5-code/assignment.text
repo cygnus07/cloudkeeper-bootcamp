@@ -17,8 +17,7 @@ ps aux | grep java | grep -v grep > java_processes.txt
 
 assignment 5 - generate ssh key pair for two servers
 ssh-keygen -t rsa -b 4096
-ssh-copy-id username@server1
-ssh-copy-id username@server2
+ssh-copy-id deepak@10.1.210.1
 
 assignment 6 - find error lines in syslog
 grep -i "error" /var/log/syslog > errors_found.txt
