@@ -23,18 +23,13 @@ assignment 6 - find error lines in syslog
 grep -i "error" /var/log/syslog > errors_found.txt
 
 assignment 7 - find all .conf files in /etc and sort
-find /etc -name "*.conf" 2>/dev/null | sort > conf_list.txt
+find /etc -name "*.conf" | sort > conf_list.txt
 
 assignment 8 - count unique shells in /etc/passwd
 cut -d: -f7 /etc/passwd | sort -u | wc -l > shell_count.txt
 
 assignment 9 - vim operations
-vim filename.txt
-i (insert mode)
-esc (normal mode)
-:w (save)
-:q (quit)
-:wq (save and quit)
+sudo apt install vim
 
 assignment 10 - reset password and reboot
 sudo passwd username
@@ -46,6 +41,3 @@ scp home_backup.tar.gz username@remote:/path/
 ssh username@remote
 tar -xzf home_backup.tar.gz
 
-assignment 12 - install applications
-sudo apt update
-sudo apt install mysql-server docker.io -y
