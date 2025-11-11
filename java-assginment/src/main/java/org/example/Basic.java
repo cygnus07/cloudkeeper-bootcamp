@@ -1,44 +1,11 @@
 package org.example;
 import java.util.Scanner;
 
-
 public class Basic {
 
-    public static void run() {
+    public static void sumOfDigits() {
         Scanner sc = new Scanner(System.in);
-
-        System.out.println("=== Basic Problems ===");
-        System.out.println("1. Sum of Digits");
-        System.out.println("2. Multiplication Table");
-        System.out.println("3. Factorial Calculator");
-        System.out.println("4. Reverse a Number");
-        System.out.print("\nChoose a problem (1-4): ");
-
-        int choice = sc.nextInt();
-
-        switch(choice) {
-            case 1:
-                sumOfDigits();
-                break;
-            case 2:
-                multiplicationTable();
-                break;
-            case 3:
-                factorialCalculator();
-                break;
-            case 4:
-                reverseNumber();
-                break;
-            default:
-                System.out.println("Invalid choice");
-        }
-
-        sc.close();
-    }
-
-    private static void sumOfDigits() {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("\nEnter a number: ");
+        System.out.println("enter a number ");
         int num = sc.nextInt();
 
         int sum = 0;
@@ -49,23 +16,23 @@ public class Basic {
             temp /= 10;
         }
 
-        System.out.println("Sum of digits of " + num + " = " + sum);
+        System.out.println("sum of digits is " + sum);
     }
 
-    private static void multiplicationTable() {
+    public static void multiplicationTable() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("\nEnter a number: ");
+        System.out.print("enter a number ");
         int num = sc.nextInt();
 
-        System.out.println("\nMultiplication Table of " + num + ":");
+        System.out.println("\nmultiplication table of " + num);
         for(int i = 1; i <= 10; i++) {
             System.out.println(num + " x " + i + " = " + (num * i));
         }
     }
 
-    private static void factorialCalculator() {
+    public static void factorialCalculator() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("\nEnter a number: ");
+        System.out.print("enter a number ");
         int num = sc.nextInt();
 
         long factorial = 1;
@@ -74,12 +41,12 @@ public class Basic {
             factorial *= i;
         }
 
-        System.out.println("Factorial of " + num + " = " + factorial);
+        System.out.println("factorial of " + num + " is " + factorial);
     }
 
-    private static void reverseNumber() {
+    public static void reverseNumber() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("\nEnter a number: ");
+        System.out.print("enter a number ");
         int num = sc.nextInt();
 
         int reversed = 0;
@@ -91,6 +58,6 @@ public class Basic {
             temp /= 10;
         }
 
-        System.out.println("Reversed number: " + reversed);
+        System.out.println("reversed number is " + reversed);
     }
 }
