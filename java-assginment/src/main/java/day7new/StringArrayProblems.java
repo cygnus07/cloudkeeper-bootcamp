@@ -1,10 +1,9 @@
-package day7code;
+package day7new;
 
 import java.util.*;
 
 public class StringArrayProblems {
-
-    public static void firstNonRepeatingChar() {
+    public static void nonRepeatingCharacter(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a string");
         String str = sc.next();
@@ -21,35 +20,28 @@ public class StringArrayProblems {
             }
         }
 
-        if(ans == '\0'){
-            System.out.println("No repeating character");
-        }
-        else{
-            System.out.println(ans);
-        }
+
+        System.out.println(ans);
+
     }
 
-    public static void twoSum() {
-        int[] nums = {2, 7, 11, 15};
+    public static void targetSum(){
+        int[] nums = {2,7,11,15};
         int target = 9;
 
         Map<Integer, Integer> map = new HashMap<>();
-
-        for (int i = 0; i < nums.length; i++) {
+        for(int i=0;i<nums.length;++i){
             int complement = target - nums[i];
-
-            if (map.containsKey(complement)) {
-                System.out.println("indices found " + map.get(complement) + " and " + i);
+            if(map.containsKey(complement)){
+                System.out.println(map.get(complement) + i);
                 return;
             }
-
-            map.put(nums[i], i);
+            map.put(nums[i],i);
         }
 
-        System.out.println("no two indices found");
     }
 
-    public static void mergeSortedLists() {
+    public static void mergeLists(){
         List<Integer> list1 = new ArrayList<>();
         List<Integer> list2 = new ArrayList<>();
 
