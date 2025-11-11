@@ -5,9 +5,9 @@ public class Main {
 
 //         StringArrayProblems.firstNonRepeatingChar();
 //         StringArrayProblems.twoSum();
-         StringArrayProblems.mergeSortedLists();
+//         StringArrayProblems.mergeSortedLists();
 
-        // SyncThreadsDemo.main(args);
+         SyncThreadsDemo.main(args);
         // ExecutorThreadsDemo.main(args);
     }
 }
