@@ -30,7 +30,7 @@ body {
   padding: 10px 20px;
   border: none;
   background-color: #18191F;
-  color: white;
+  color: #fff;
   cursor: pointer;
   border-radius: 6px;
 }
@@ -70,9 +70,10 @@ body {
 }
 
 .care-desc {
-  width: 630px;
+  max-width: 630px;
   margin: 0 auto;
   margin-top: 16px;
+  text-align: center;
 }
 
 .care-container {
@@ -99,14 +100,16 @@ body {
 
 .care-image-wrapper {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  align-items: stretch;
+  justify-content: space-between;
   padding: 50px 0px;
+  gap: 20px;
 }
 
 .client-image-container {
   position: relative;
-  width: 368px;
+  flex: 1;
+  max-width: 368px;
   text-align: center;
   padding: 30px;
   box-sizing: border-box;
@@ -121,6 +124,8 @@ body {
 .client-image-container p {
   font-size: 14px;
   color: #717171;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .pixel-grade {
@@ -153,7 +158,7 @@ body {
 .pixel-grade .learn-more button {
   padding: 14px 32px;
   background: #4CAF4F;
-  color: white;
+  color: #fff;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -282,7 +287,7 @@ body {
 .demo button {
   padding: 14px 32px;
   background: #4CAF4F;
-  color: white;
+  color: #fff;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -344,7 +349,7 @@ body {
   gap: 12px;
 }
 .footer-section .footer-container .footer-content .footer-links .footer-column h4 {
-  color: white;
+  color: #fff;
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 12px;
@@ -367,7 +372,7 @@ body {
   border: none;
   border-radius: 6px 0 0 6px;
   background: rgba(255, 255, 255, 0.1);
-  color: white;
+  color: #fff;
   font-size: 14px;
 }
 .footer-section .footer-container .footer-content .footer-links .footer-column .newsletter input::placeholder {
@@ -378,7 +383,7 @@ body {
   border: none;
   border-radius: 0 6px 6px 0;
   background: #4CAF4F;
-  color: white;
+  color: #fff;
   cursor: pointer;
   font-size: 18px;
 }

@@ -73,9 +73,10 @@ body {
 }
 
 .care-desc {
-    width: 630px;
+    max-width: 630px;
     margin: 0 auto;
     margin-top: $font-normal;
+    text-align: center;
 }
 
 .care-container {
@@ -102,14 +103,16 @@ body {
 
 .care-image-wrapper {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    align-items: stretch;
+    justify-content: space-between;
     padding: 50px 0px;
+    gap: 20px;
 }
 
 .client-image-container {
     position: relative;
-    width: 368px;
+    flex: 1;
+    max-width: 368px;
     text-align: center;
     padding: $spacing-medium;
     box-sizing: border-box;
@@ -126,6 +129,8 @@ body {
     p {
         font-size: $font-small;
         color: $text-gray;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 }
 
