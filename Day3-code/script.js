@@ -24,6 +24,28 @@ function getCostliestProduct(products) {
     return costliest
 }
 
+function manualApply(fn, ctx, args) {
+    ctx = ctx || window
+    var key = '__fn__'
+    ctx[key] = fn
+
+    var result
+    if(args.length === 0) {
+        result = ctx[key]()
+    } else if(args.length === 1) {
+        result = ctx[key](args[0])
+    } else if(args.length === 2) {
+        result = ctx[key](args[0], args[1])
+    } else if(args.length === 3) {
+        result = ctx[key](args[0], args[1], args[2])
+    } else if(args.length === 4) {
+        result = ctx[key](args[0], args[1], args[2], args[3])
+    }
+
+    delete ctx[key]
+    return result
+}
+
 (function() {
     var products = [
         new Product("Iphone 17", 399, "Smartphones"),
@@ -63,7 +85,8 @@ function getCostliestProduct(products) {
     }
 
 
-    var costliestProduct = getCostliestProduct.apply(null, [products]);
+    // var costliestProduct = getCostliestProduct.apply(null, [products]);
+    var costliestProduct = manualApply(getCostliestProduct, null, [products]);
 
     document.getElementById("costliest").textContent = 
     `Costliest Product is ${costliestProduct.name} 

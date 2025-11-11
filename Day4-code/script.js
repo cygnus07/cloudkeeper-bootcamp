@@ -140,7 +140,19 @@ const fun = (name = "abc") => {
 
 // flatten nested arrays
 const flattenArray = (arr) => {
-    return arr.flat(Infinity)
+    // return arr.flat(Infinity)
+    let result = []
+    for(let i = 0; i < arr.length; i++){
+        if(Array.isArray(arr[i])){
+            let flattened = flattenArray(arr[i])
+            for(let j = 0; j < flattened.length; j++){
+                result[result.length] = flattened[j]
+            }
+        } else {
+            result[result.length] = arr[i]
+        }
+    }
+    return result
 }
 // console.log(flattenArray([1, [2, [3, [4, 5]]]]))
 // console.log(flattenArray([1, [2, 3], [4, [5, 6]]]))
