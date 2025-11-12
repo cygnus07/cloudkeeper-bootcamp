@@ -7,7 +7,7 @@ public class Main {
 //         StringArrayProblems.twoSum();
 //         StringArrayProblems.mergeSortedLists();
 
-         SyncThreadsDemo.main(args);
-        // ExecutorThreadsDemo.main(args);
+//         SyncThreadsDemo.main(args);
+         ExecutorThreadsDemo.main(args);
     }
 }
