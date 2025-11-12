@@ -23,5 +23,6 @@ public class Main {
         // ExceptionBasics.customEmailException();
 
         // CollectionBasics.customerPOJO();
+        CollectionBasics.nonRepeat();
     }
 }
