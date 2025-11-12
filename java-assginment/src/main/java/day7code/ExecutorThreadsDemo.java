@@ -6,47 +6,20 @@ import java.util.concurrent.TimeUnit;
 
 public class ExecutorThreadsDemo {
 
-    private static final Object lock = new Object();
-    private static boolean thread1Turn = true;
-
     public static void main(String[] args) {
         System.out.println("executor service threads printing tables\n");
 
-        ExecutorService executor = Executors.newFixedThreadPool(2);
+        ExecutorService executor = Executors.newSingleThreadExecutor();
 
         Runnable task1 = () -> {
             for (int i = 1; i <= 10; i++) {
-                synchronized (lock) {
-                    while (!thread1Turn) {
-                        try {
-                            lock.wait();
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                    }
-
-                    System.out.println("executor thread 1 2 x " + i + " = " + (2 * i));
-                    thread1Turn = false;
-                    lock.notify();
-                }
+                System.out.println("executor thread 1 2 x " + i + " = " + (2 * i));
             }
         };
 
         Runnable task2 = () -> {
             for (int i = 1; i <= 10; i++) {
-                synchronized (lock) {
-                    while (thread1Turn) {
-                        try {
-                            lock.wait();
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                    }
-
-                    System.out.println("executor thread 2 4 x " + i + " = " + (4 * i));
-                    thread1Turn = true;
-                    lock.notify();
-                }
+                System.out.println("executor thread 2 4 x " + i + " = " + (4 * i));
             }
         };
 

@@ -1,0 +1,57 @@
+ssh-keygen -t ed25519 -C "kuldeepsingh21070@gmail.com"
+cat ~/.ssh/id_ed25519.pub
+
+git init
+git remote add origin git@github.com:cygnus07/cloudkeeper-bootcamp.git
+
+git clone git@github.com:cygnus07/cloudkeeper-bootcamp.git
+cd cloudkeeper-bootcamp
+
+echo "update" > test.txt
+git add test.txt
+git commit -m "content"
+git push origin main
+
+git branch f1
+git branch f2
+
+git checkout f1
+git add test.txt
+git commit -m "Update test.txt in f1"
+git push origin f1
+
+git checkout main
+git add test.txt
+git commit -m "Update test.txt in main"
+
+git merge f1
+
+git status
+vim test.txt
+git add test.txt
+git commit -m "Resolve merge conflict"
+
+git checkout -b feature
+git add feature.txt
+git commit -m "Add feature"
+git push origin feature
+
+git checkout main
+git add main.txt
+git commit -m "Add main file"
+git push origin main
+
+git log --oneline --all
+
+git log --oneline
+git rebase -i HEAD~3
+
+git log --oneline
+git reset --soft HEAD~1
+git status
+
+git log --oneline
+git revert HEAD
+
+git branch -d f1
+git push origin --delete f1
